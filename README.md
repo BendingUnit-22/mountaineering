@@ -2,6 +2,7 @@
 
 <img src="pictures/logo.png" width="250" alt="Shower logo">
 
+# TEST
 > Shower ['ʃəuə] noun. A person or thing that shows.
 
 1. Built on HTML, CSS and vanilla JavaScript
