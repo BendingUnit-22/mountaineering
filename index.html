@@ -100,7 +100,182 @@
 	width: 100%;
 	height: 5px;
 }
-		</style>
+
+
+
+body{
+  background-color: #3bb2b8;
+  background: linear-gradient(
+    25deg,
+    rgba(66, 230, 149, 1),
+    rgba(66, 32, 149, 1)
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bg-grad{
+	 background-color: #3bb2b8;
+  background: linear-gradient(
+    25deg,
+    rgba(66, 230, 149, 1),
+    rgba(66, 32, 149, 1)
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.lightbox-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+
+.lightbox-gallery div > img {
+  max-width: 100%;
+  display: block;
+}
+
+
+.lightbox-gallery div:hover {
+  margin: 10px;
+  flex-basis: 180px;
+}
+
+
+.lightbox-gallery div {
+  margin: 10px;
+  flex-basis: 180px;
+  padding: 10px;
+}
+
+
+.lightbox-gallery div:hover {
+	background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);	
+    padding: 10px;
+
+}
+
+@media only screen and (max-width: 480px) {
+  .lightbox-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lightbox > div {
+    margin-bottom: 10px;
+  }
+}
+
+/*Lighbox CSS*/
+
+.lightbox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.lightbox img {
+  display: block;
+  margin: auto;
+}
+
+.lightbox .caption {
+  margin: 15px auto;
+  width: 50%;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #eee;
+}
+
+.github-link {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.github-link:hover,
+.github-link:active,
+.github-link:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.card-hover:hover {
+	background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);	
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
 
 
 </head>
@@ -168,7 +343,7 @@
 			  <div class="card  bg-info" style="color: white">
 			    <div class="card-header" id="headingThree">
 			      <h5 class="mb-0">
-			        <button class="btn btn-warning collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Topographic Map
+			        <button class="btn btn-warning collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Topographic Map & Guidebook
 			        </button>
 			      </h5>
 			    </div>
@@ -195,20 +370,20 @@
 	<!--- SLIDE  2-->
 <section class="slide">
 	<h2 style="color: white">UV Protection</h2>
-	<div class="container">
+	<div class="container-fluid">
 	 	<div class="row">
 
-	  	<figure class="figure col-md-5 card" style="font-size: 16px; background-color: rgba(240,173,78, 0.7);"">
+	  	<figure class="figure col-md-5 card card-hover" style="font-size: 16px; background-color: rgba(240,173,78, 0.8);">
 		  	<p class="h4">sunscreen</p>
 		  <img src="https://www.obagi.com/sites/default/files/blog_images/sunshield-tint-outdoors.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
 			  <figcaption class="figure-caption"">  UV radiations can reach alpine regions easier than at sea level because the atmosphere is thinner at the higher altitude. For climbers and mountaineers, sunscreen is a must because it shields skin from the harmful radiation. </figcaption>
 			</figure>
 			<div class="col-md-1"> </div>
 
-			<figure class="figure col-md-5 card" style="font-size: 16px;">
+			<figure class="figure col-md-5 card card-hover" style="font-size: 16px; background-color: rgba(255,255,255, 0.8);">
 			<p class="h4">goggle</p>
 			  <img src="https://www.jebiga.com/wp-content/uploads/2015/02/BOSKY-MK-II-SNOW-GOGGLES-02.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-			  <figcaption class="figure-caption" style="color: gray;">Exposing to high levels of UV rays from the sun while at a high elevation can lead to snow blindness. That’s where protective goggle comes in. </figcaption>
+			  <figcaption class="figure-caption">Exposing to high levels of UV rays from the sun while at a high elevation can lead to snow blindness. That’s where protective goggle comes in. </figcaption>
 			</figure>
 
 		  </div>
@@ -232,14 +407,15 @@
 		  <hr class="my-4">
 		  <div class="row">
 
-			<figure class="figure col-md-4 card">
-			  <img src="http://www.historyofmatches.com/images/historyofmatches/lighter-1-small.jpg" class="figure-img img-fluid rounded" >
-			  	<figcaption class="figure-caption text-center">Lighter (Cooking)</figcaption>
-			</figure>
 
 			<figure class="figure col-md-4 card" >
-			  <img src="https://s3.amazonaws.com/images.gearjunkie.com/uploads/2017/09/5Led-Lenser-MH10.jpg" class="figure-img img-fluid rounded" >
-			 <figcaption class="figure-caption text-center">Light with Head Mount</figcaption>
+			  <img src="pictures/adventure.jpg" class="figure-img img-fluid rounded" >
+			 <figcaption class="figure-caption text-center">Headlamp</figcaption>
+			</figure>
+
+			<figure class="figure col-md-4 card">
+			  <img src="https://i.ebayimg.com/images/g/6m0AAOSw1LRZp98q/s-l300.jpg" class="figure-img img-fluid rounded" >
+			  	<figcaption class="figure-caption text-center">Lighter</figcaption>
 			</figure>
 
 
@@ -278,6 +454,62 @@
 		</figure>
 	</section>
 
+
+
+
+<section class="slide">
+
+	<h2 style="color: orange">Climbing Gears</h2>
+
+	<div class="container">
+		<div class="lightbox-gallery">
+
+				<div ><img class="tool_image" src="http://www.outside.co.uk/images/product/Petzl-A073BA-SIROCCO-black-S17.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, quae, quam. Ut dolorum quia, unde dicta at harum porro officia obcaecati ipsam deserunt fugit dolore delectus quam, maxime nisi quo."></div>
+
+				<div><img  class="tool_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQob820I0GAK9hy7vMeBOHdRLTHm80uIj2kcUGbXn4ey0aXD1H_Vw" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime accusamus officiis dignissimos doloribus consectetur harum eos sapiente optio aut minima."></div>
+
+				<div><img  class="tool_image" src="https://mistymountain.com/wp-content/uploads/2016/12/Summit-Harness-Front-300x300.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates veritatis similique, amet, maiores soluta recusandae cupiditate, sed perspiciatis fugit minima, sunt dolores cum earum deserunt illo ipsum!"></div>
+
+				<div><img  class="tool_image" src="https://www.tacticalassaultgearstore.com/pub/media/catalog/product/cache/6b291df8afd04bab339803e1936b8708/8/3/833758.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque laudantium dignissimos tenetur eos unde quidem repellat officiis nemo laboriosam necessitatibus deleniti commodi quis aliquid est atque tempora aut, nihil!"></div>
+
+				<div><img  class="tool_image" src="https://i.ebayimg.com/images/g/EysAAOSwySlaFtGb/s-l300.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto minus consequatur soluta quaerat itaque, laboriosam quis a facilis, cumque, deleniti quas aperiam voluptate dolore. Enim nostrum sit eaque, porro eligendi illo placeat?"></div>
+
+				<div><img  class="tool_image" src="https://content.backcountry.com/images/items/medium/LSP/LSP0259/BL.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi suscipit quam, id aliquam totam aperiam quas rem debitis voluptatem pariatur, illo accusamus facilis eius ipsa! Reprehenderit libero, quas iste repudiandae distinctio, quos dignissimos."></div>
+
+		</div>
+
+	</div>
+
+		<figure>
+				<img class="cover" src="https://visiting-croatia.com/wp-content/uploads/2018/04/rock-climbing-iris-adventures-01-1024x640.jpg"  alt="">
+		</figure>
+</section>
+ 
+
+
+<section class="slide">
+		<h2>More Climbing Gear</h2>
+
+	<div class="container">
+		<div class="lightbox-gallery">
+
+				<div ><img class="tool_image" src="https://www.ontarioclimbing.com/Gear/AsoloBoots/files/asolo6bgv2.jpg" alt="Boots" name="Boots"></div>
+
+				<div><img  class="tool_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnnh3vP1yRpv0z25jxDts-TtWOf85UjjbHlzlGH9mMak9pdVoVPQ" alt="Crampons"></div>
+
+				<div><img  class="tool_image" src="http://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw1d5f583d/products/ice_alpine/412078_79_cobra_adze_hammer_web.jpg" alt="Ice Axe"></div>
+
+				
+
+		</div>
+
+	</div>
+
+			<figure>
+				<img class="cover" src="https://s2.insidehook.com/ice_grid_1517938387.jpg">
+	</figure>
+	</section>
+
 		
 	<!--- SLIDE 5 -->
 <section class="slide">
@@ -311,13 +543,13 @@
 </section>
 
 
-<section class="slide bg-info">
+<section class="slide bg-grad">
 	<div class="container-fluid">
 	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6  project wow animated animated4 fadeInLeft">
         <div class="project-hover">
         	<h3>Nutrition</h3>
             <hr />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar ex pulvinar est laoreet ullamcorper.</p>
+            <p style="font-size: 18px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar ex pulvinar est laoreet ullamcorper.</p>
         </div>
     </div>
 	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 project project-1 wow animated animated3 fadeInLeft">
@@ -339,219 +571,125 @@
 
 
 	<section class="slide">
-		<h2>Emergency shelter</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
+		<h2 style="color:white">Emergency shelter</h2>
+		<div class="jumbotron" style="opacity: 0.65">
+			<div class="row"> 
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<ol>
+				 			<li>Tent</li>
+				  			<li>Tarp</li>
+				 			<li>Reflective Blanket</li>
+				 		</ol>
+					</div>
+						<div class="col-sm-6 col-md-6 col-lg-6">
+						<ol>
+				 			<li>Tent</li>
+				  			<li>Tarp</li>
+				 			<li>Reflective Blanket</li>
+				 		</ol>
+					</div>
+			</div>
+		</div>
+
+
+
 		<figure>
 				<img class="cover" src="https://farm8.static.flickr.com/7090/7048232539_378950b8ac_b.jpg"  alt="">
 	</figure>
+
+
 	</section>
 
 
 
-		<section class="slide">
-		<h2>Rope</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Poop Blanket</li>
- 		</ol>
-		<figure>
-				<img class="cover" src="http://blog.weighmyrack.com/wp-content/uploads/2016/04/CAMP-Nano-22-clove-hitch-comparison-1024x640.jpg"  alt="">
-	</figure>
-	</section>
 
 	<section class="slide">
-		<h2>Helmet</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<h2 style="color: white">Rescue Equipment</h2>
+<!-- 			<ol>
+			 <li>Avalanche transceiver</li>
+ 			<li>Crevasse rescue gear</li>
+  			<li>Shovel</li>
+  			<li>Signaling mirror</li>
+ 		</ol> -->
+
+	<div class="container">
+		<div class="lightbox-gallery">
+
+				<div ><img class="tool_image" src="https://s7d2.scene7.com/is/image/SS/102152_YYY_1?$600$"></div>
+
+				<div><img  class="tool_image" src="https://shop.coronatoolsusa.com/pub/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/s/s/ss25010_lrg.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime accusamus officiis dignissimos doloribus consectetur harum eos sapiente optio aut minima."></div>
+
+				<div><img  class="tool_image" src="https://mec.imgix.net/medias/sys_master/high-res/high-res/8807216381982/5034083-NOC02.jpg?w=600&h=600&auto=format&q=60&fit=fill&bg=FFF" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates veritatis similique, amet, maiores soluta recusandae cupiditate, sed perspiciatis fugit minima, sunt dolores cum earum deserunt illo ipsum!"></div>
+
+			 
+				<div><img  class="tool_image" src="http://www.ustbrands.com/wp-content/uploads/2014/07/signal-devices-find-me-mirror.jpg"></div>
+
 			
-	</section>
 
-	<section class="slide">
-		<h2>Harness</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
+	</div>
 
 
-	<section class="slide">
-		<h2>Boots</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
 
-
-	<section class="slide">
-		<h2>Crampons</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-
-	<section class="slide">
-		<h2>Ice Axe</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-
-	<section class="slide">
-		<h2>Belay/rappel device</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Pulley</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Climbing pack</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Route description or guidebook</h2>
 		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
+				<img class="cover" src="https://farm8.static.flickr.com/7388/10842452316_9baefff802_b.jpg"  alt=>
+	</figure>
 
-		<section class="slide">
-		<h2>Runners—singles and doubles</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<section class="slide">
-		<h2>Prusik cords</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<section class="slide">
-		<h2>Hand protection (athletic tape, gloves)</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-
-	<section class="slide">
-		<h2>Signaling mirror</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-
-	</section>
-		<section class="slide">
-		<h2>Avalanche transceiver</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-
-	</section>
-		<section class="slide">
-		<h2>Crevasse rescue gear</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-
-		</section>
-		<section class="slide">
-		<h2>Shovel</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-
-
-		</section>
-		<section class="slide">
-		<h2>Probe</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori PPPOO s nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero </figcaption>
-		</figure>
 	</section>
 
 	<div class="progress bg-success"></div>
 
-	
+	<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <h2 id='innertitle'> Title </h2>
+		    <p style="font-size: 16px">	
+		    <img id="innerimg"  class="" src="" style="max-width: 250px; max-height: 250px; margin: 0px 0px 0px 10px; float: right">
+		    <span id="innertext"> Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal..
+		    </span>
+		    </p>
+		  </div>
+		</div>
+
 
 	<script src="node_modules/shower-core/shower.min.js"></script>
 	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	
+	var modal = document.getElementById('myModal');
+	var span = document.getElementsByClassName("close")[0];
+	$(document).ready(function(){
+    	$(".tool_image").click(function(){
+    		    modal.style.display = "block";
+    		    $('#innerimg').attr('src', $(this).attr('src'))
+    		    $('#innertitle').html($(this).attr('name'));
+    		    $('#innertext').html($(this).attr('alt'));
+    	});
+
+
+
+
+
+    	span.onclick = function() {
+    			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+    	if (event.target == modal) {
+    	    modal.style.display = "none";
+	    }
+	}
+
+	});
+</script>
+
 
 
 </body>
