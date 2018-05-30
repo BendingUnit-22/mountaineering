@@ -658,32 +658,27 @@ body{
 
 <script type="text/javascript">
 	
-	var modal = document.getElementById('myModal');
-	var span = document.getElementsByClassName("close")[0];
-	$(document).ready(function(){
-    	$(".tool_image").click(function(){
-    		    modal.style.display = "block";
-    		    $('#innerimg').attr('src', $(this).attr('src'))
-    		    $('#innertitle').html($(this).attr('name'));
-    		    $('#innertext').html($(this).attr('alt'));
-    	});
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+$(document).ready(function(){
+   	$(".tool_image").click(function(){
+    	modal.style.display = "block";
+    	$('#innerimg').attr('src', $(this).attr('src'))
+    	$('#innertitle').html($(this).attr('name'));
+    	$('#innertext').html($(this).attr('alt'));
+    });
 
-
-
-
-
-    	span.onclick = function() {
-    			modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-    	if (event.target == modal) {
-    	    modal.style.display = "none";
-	    }
+    span.onclick = function() {
+    	modal.style.display = "none";
 	}
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+    if (event.target == modal) {
+   	    modal.style.display = "none";
+	}
+   }
 
-	});
+});
 </script>
 
 
