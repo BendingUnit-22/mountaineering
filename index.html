@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<!-- CSSS -->
 	<style>
 			#cover h2 {
 				margin:30px 0 0;
@@ -29,7 +30,250 @@
 				.panel-default > .panel-heading {
  				   background-color:#000;
 				}
-		</style>
+					.title-arch {
+		text-align: center;
+		margin: 50px 0;
+		font-size: 22px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+.project {
+	width: 100%;
+	height: 500px;
+	background-image: url(https://climbbigmountains.com/cms/wp-content/uploads/2016/04/food2.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 0 !important;
+	float:left;
+}
+
+.project-1 {
+	background-image: url("pictures/Hydration.jpg");
+}
+ 
+.project-hover {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background-color: rgba(186, 232, 2, 0.7);
+	padding: 40% 30px !important;
+}
+
+.project-hover hr {
+	height: 30px;
+	width: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background-color: rgba(255, 255, 255, 1);
+	border: 0;
+}
+
+.project-hover a {
+	color: rgba(255, 255, 255, 1);
+	padding: 2px 22px;
+	line-height: 40px;
+	border: 2px solid rgba(255, 255, 255, 1);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.project-hover a:hover {
+	border-color: rgba(51, 51, 51, 1);
+	color: rgba(51, 51, 51, 1);
+	background-color: #FFF;
+}
+
+.project:hover .project-hover {
+	opacity: 1;
+}
+
+.project:hover .project-hover hr {
+	width: 100%;
+	height: 5px;
+}
+
+/*
+
+body{
+  background-color: #3bb2b8;
+  background: linear-gradient(
+    25deg,
+    rgba(66, 230, 149, 1),
+    rgba(66, 32, 149, 1)
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}*/
+
+.bg-grad{
+	 background-color: #3bb2b8;
+  background: linear-gradient(
+    25deg,
+    rgba(66, 230, 149, 1),
+    rgba(66, 32, 149, 1)
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.lightbox-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.lightbox-gallery div > img {
+  max-width: 100%;
+  display: block;
+}
+
+
+.lightbox-gallery div:hover {
+  margin: 10px;
+  flex-basis: 180px;
+}
+
+
+.lightbox-gallery div {
+  margin: 10px;
+  flex-basis: 180px;
+  padding: 10px;
+}
+
+
+.lightbox-gallery div:hover {
+	background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);	
+    padding: 10px;
+
+}
+
+@media only screen and (max-width: 480px) {
+  .lightbox-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lightbox > div {
+    margin-bottom: 10px;
+  }
+}
+
+/*Lighbox CSS*/
+
+.lightbox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.lightbox img {
+  display: block;
+  margin: auto;
+}
+
+.lightbox .caption {
+  margin: 15px auto;
+  width: 50%;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #eee;
+}
+
+.github-link {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.github-link:hover,
+.github-link:active,
+.github-link:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.card-hover:hover {
+	background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);	
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
 
 
 </head>
@@ -40,48 +284,72 @@
 		<p>By Rixing Wu</p>
 	</header>
 
-
-
-
 	<!--- SLIDE 1 -->
 	<section class="slide" id="cover">
 		<h2>Climbing Hardware: </h2>
 		<h2>protection and gear behind the rope</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net"> Rixing Wu</a></p>
+		<p>Rixing Wu</p>
 		<figure>
 			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://www.thehikersway.com/hikers-u/hiking-gear/">© The Hiker's Way</a>
-			</figcaption>
 		</figure>
 	</section>
 
 
+	<!--- SLIDE 1 -->
+	<section class="slide" id="cover">
+		<div class="container">
+			<br>
+			<h3 style="color: gray;">Dangers of Mountain Climbing</h3>
+			<hr>
+			<div class="row">
+				<div class="col-md-12" style="height: 100%">	<img class="img-fluid" src="pictures/rockinfo.png" style="width: 100%"></div>
+				<div class="col-md-12" style="height: 100%">
+					<p style="color: gray">The chances of dying in mountain climbing is <strong>1 in 15,700</strong> annually, which is about a thousand times more dangerous than snowboarding. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!--- SLIDE 1 -->
+	<section class="slide" id="cover">
+		<div class="container">
+			<br>
+			<h3 style="color: gray;">Dangers of High Altitude Climbing</h3>
+			<hr>
+			<div class="row">
+				<div class="col-md-12">	<img class="img-fluid" src="pictures/rock1.png" style="width: 100%"></div>
+					<div class="col-md-12" style="height: 100%">
+					<p style="color: darkgray;"> The odds are worst in Nepal. This is no mean to discourage anyone from pursuiting mountaineering or rock climbing, but to prepare for the worst. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
 	<!--- SLIDE 2-->
 
-		</section>
-		<section class="slide">
+<section class="slide">
+
 		<h2>Navigation Tool</h2>
 			<div class="accordion " id="accordionExample">
+
 			  <div class="card  bg-info" style="color: white">
 			    <div class="card-header" id="headingOne">
 			      <h5 class="mb-0">
 			        <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
-			          GPS
+			          GPS & Smart device
 			        </button>
 			      </h5>
 			    </div>
-
 			    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-			      <div class="card-body">
-  					GPS allows users to track mileage, speed, elevation, and location at any given moment. For climbers, this is a great tool for tracking progess. 
+			      <div class="card-body " style="font-size: 16px">
+  					In the recent decades, personal phone or portable GPS devices hit the world by storm, allowing anyone with a device to track their position, speed, and elevation at any given moment. For long trips, dedicated GPS should be prefered over smartphone as they are prone to singal lost. It’s also important to note that neither smart phone or GPS can replace a strong grasp of navigational techniques. 
 			    </div>
-
-
 			  </div>
+			 </div>
 
-			  <div class="card  bg-info" style="color: white">
+			 <div class="card  bg-info" style="color: white">
 			    <div class="card-header" id="headingTwo">
 			      <h5 class="mb-0">
 			        <button class="btn btn-warning collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -90,13 +358,14 @@
 			      </h5>
 			    </div>
 			    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-			      <div class="card-body">
-						Whether it is for circumnavigating the world or climbing mountain, the compass has been used for hundred of years for navigation. Unlike eletronic navigation systems, which requires periodic calibration and battery to operate, a compass will always and accurately points north. 
-			      </div>
-
+			      <div class="card-body" style="font-size: 16px ">
+			      		<p>
+			      			<img src="http://howtowilderness.com/wordpress/wp-content/uploads/2011/10/Earth_Magnetic_Field_Declination_from_1590_to_1990.gif" style="max-width: 2150px; max-height: 150px; margin: 0px 0px 0px 10px; float: right" />
+			      			Whether for circumnavigation or mountaineering, the compass has been used for hundred of years for navigation. The red end of magnetic needle generally points in direction of local magnetic field, which in most cases, is not the same as true north. The animation on the right should give you a good indication of how magnetic fields have changed over time. The good news is that the compass can be easily re-orientated and most have adjustor for offseting declination. 
+			      		</p>
 			    </div>
 			  </div>
-
+			 </div>
 
 			  <div class="card  bg-info" style="color: white">
 			    <div class="card-header" id="headingThree">
@@ -106,83 +375,72 @@
 			      </h5>
 			    </div>
 			    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" >
-			      <div class="card-body" >
-			      	When all fails, topographic maps are great alternative for navigation needs. An entire trip can be planned out with help of a topographic map, and can greatly decrease the chance of getting loss. It can also tell a lot about an area's elevation.
-
+			      <div class="card-body" style="font-size: 16px">
+			      	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/CD006-Triangulation_16th_century.png/1200px-CD006-Triangulation_16th_century.png" style="max-width: 2150px; max-height: 150px; margin: 0px 0px 0px 10px; float: right" />
+			      	Paired with a compass, topographic map can be great, especially for those whose looking for adventures. A location is determined by pinpointing the bearings from multiple locations on map, a process known as triangulation. However, to order to successfully triangulate, known features or landmarks must exist to use as a point of reference. (<a href="http://www.compassdude.com/compass-triangulation.php" style="color:orange">Learn More</a>)
+			      
 			      </div>
 			    </div>
-			  </div>
 
+			  </div>
 
 			</div>
 
-			<figure>
-			<img class="cover" src="https://czestochowa-jezuici.pl/wp-content/uploads/2015/09/Compass.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://www.thehikersway.com/hikers-u/hiking-gear/"></a>
-			</figcaption>
+		<figure>
+		<img class="cover" src="https://czestochowa-jezuici.pl/wp-content/uploads/2015/09/Compass.jpg" alt="">
 		</figure>
+</section>
 
 
-	</section>
+	<!--- SLIDE  3-->
+<section class="slide">
+	<h2 style="color: white">UV Protection</h2>
+	<div class="container-fluid">
+	 	<div class="row">
 
+	  	<figure class="figure col-md-5 card card-hover" style="font-size: 13px; background-color: rgba(240,173,78, 0.8);">
+		  	<p class="h4">Skin </p>
+		  <img src="https://www.obagi.com/sites/default/files/blog_images/sunshield-tint-outdoors.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+			  <figcaption class="figure-caption"">  UV radiations can reach alpine regions easier than at sea level because atmosphere is thinner at the higher altitude.  Due to long explosure in the sun, climbers and mountaineersto often get burned on tops of the ears and ever nostrils. It might seem obvious, but it is incredibly important to wear sunscreen and cover as much skin as possible. </figcaption>
+			</figure>
+			<div class="col-md-1"> </div>
 
+			<figure class="figure col-md-5 card card-hover" style="font-size: 13px; background-color: rgba(255,255,255, 0.8);">
+			<p class="h4">Eye</p>
+			  <img src="https://www.jebiga.com/wp-content/uploads/2015/02/BOSKY-MK-II-SNOW-GOGGLES-02.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+			  <figcaption class="figure-caption">Exposing to high levels of UV rays from the sun, especially while in at a high elevation, can lead to photokeratitis or snow blindness. A painful, temporary loss of vision due to overexposure to the sun's UV rays. Fortunately, snow blindnesscan be easily avoided by wearing snow goggle or sunglasses.</figcaption>
+			</figure>
 
-	<!--- SLIDE  2-->
-	</section>
-		<section class="slide">
-		<h2 style="color: white">UV Protection</h2>
-
-	<div class="container">
-  	<div class="row">
-
-  	<figure class="figure col-md-5 card bg-warning" style="font-size: 16px;"">
-  	<p class="h4">sunscreen</p>
-	  <img src="https://www.obagi.com/sites/default/files/blog_images/sunshield-tint-outdoors.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-	  <figcaption class="figure-caption" style="color: gray;">  UV radiations can reach alpine regions easier than at sea level because the atmosphere is thinner at the higher altitude. For climbers and mountaineers, sunscreen is a must because it shields skin from the harmful radiation. </figcaption>
-	</figure>
-	<div class="col-md-1"> </div>
-
-	<figure class="figure col-md-5 card  bg-warning" style="font-size: 16px;">
-	<p class="h4">goggle</p>
-	  <img src="https://www.jebiga.com/wp-content/uploads/2015/02/BOSKY-MK-II-SNOW-GOGGLES-02.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-	  <figcaption class="figure-caption" style="color: gray;">Exposing to high levels of UV rays from the sun while at a high elevation can lead to snow blindness. That’s where protective goggle comes in. </figcaption>
-	</figure>
-
-  </div>
-</div>
-
+		  </div>
+		</div>
 
 		<figure>
 			<img class="cover" src="https://farm4.static.flickr.com/3697/9353863646_23967cc61c_b.jpg" alt="">
-			<figcaption class="white">
-				<a href="http://www.thehikersway.com/hikers-u/hiking-gear/"></a>
-			</figcaption>
 		</figure>
-	</section>
-	</section>
+</section>
 
-	<!--- SLIDE 3 -->
-	<section class="slide">
-		<h2 style="color: white">Illumination</h2>
-		<div class="container-fluid" style="opacity: 0.8; background-color: white; font-size: 16px">
+	<!--- SLIDE 4 -->
+<section class="slide">
+	<h2 style="color: white">Illumination and Heating</h2>
+	<div class="container" style="background-color: white; font-size: 16px">
 			
-		  <p class="lead"></p>
+	  <p class="lead"></p>
 		   <div class="panel">
-		   		<strong>What you need?</strong>
-		   		<p style="color:black"> In prehistory, fire provided warmth and protected us from wild predators. For climbers and mountaineers, it is just as essential. It can be used for cooking, illumination, and signaling. Under extremely cold temperature, it is often used to melt snow for drinking. </p>
+
+		   		<p style="color:black; font-size: 14px;"> Whether it is setting up camp, starting an early climb, or navigating at night, a reliable source of light is of vital importance. Headlamps use LEDs exclusively as their light source, not only light but also energy-efficient and long-lasting. Although not as portable, fire is also a great source of light and can be used to melt snow. In alpine regions, where tinder and wood are scarce, multifuel stoves are used instead. They run on gas canisters, white gas, kerosene and denatured alcohol. It is also a good idea to bring a fire starter kit  in case of equipment malfunction. </p>
 		   </div>
 		  <hr class="my-4">
 		  <div class="row">
 
-			<figure class="figure col-md-4 card">
-			  <img src="http://www.historyofmatches.com/images/historyofmatches/lighter-1-small.jpg" class="figure-img img-fluid rounded" >
-			  	<figcaption class="figure-caption text-center">Lighter (Cooking)</figcaption>
-			</figure>
 
 			<figure class="figure col-md-4 card" >
-			  <img src="https://s3.amazonaws.com/images.gearjunkie.com/uploads/2017/09/5Led-Lenser-MH10.jpg" class="figure-img img-fluid rounded" >
-			 <figcaption class="figure-caption text-center">Light with Head Mount</figcaption>
+			  <img src="pictures/adventure.jpg" class="figure-img img-fluid rounded" >
+			 <figcaption class="figure-caption text-center">Headlamp</figcaption>
+			</figure>
+
+			<figure class="figure col-md-4 card">
+			  	<iframe width="300" height="200" src="https://www.youtube.com/embed/mGCq_0lfRLM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			  	<figcaption class="figure-caption text-center">Gas Stove</figcaption>
 			</figure>
 
 
@@ -199,293 +457,255 @@
 					<a href=""></a>
 				</figcaption>
 		</figure>
-	</section>
-	</section>
+</section>
 
 	
-	<!--- SLIDE 4 -->
-	<section class="slide" style="color: white">
-		<h2 style="color: white">First-aid supplies</h2>
-			<hr class="my-4" style="border-color: white">
-		 <p style="color:white"> Having an first aid kit can mean the difference between life and death in exteme condition. Always pack accordingly because accidents do happen!	<br>
-		 	<strong class="next"> What you need: </strong>
-		 <ol>
+	<!--- SLIDE 5 -->
+<section class="slide" style="color: white">
+	<h2 style="color: white">First-aid supplies</h2>
+		<hr class="my-4" style="border-color: white">
+	 <p style="color:white; font-size: 16px"> As the body adjusting higher altitude, it's normal for acclimatization to occur. It's important watch out for signs when climbing and adjust pace if needed. Symptoms includes headache, irregular breathing, and sleeplessness.  Mountaineering is an extreme sport and with a lot of casualty, having an first aid kit could mean the difference between life and death. To prepare for more traumatic situations, I’d bring a few more items to being around a wounded person more bearable, such as painkiller. For treating common injuries and sickness, here are the things you might need:
+		 <ol style="font-size: 18px">
+		 	<li class="next">Aspirin (elevation sickness)</li>
+		 	<li class="next">Adhesive bandages</li>
 			<li class="next">Medical tape/Duct tape</li>
 			<li class="next">Tweezers, small scissors, and safety pins</li>
 			<li class="next">Disinfecting ointment/Neosporin</li>
-			<li class="next">Adhesive bandages</li>
 		</ol>
 		</p>
 
  			<figure>
 				<img class="cover" src="https://www.desktopbackground.org/p/2012/08/13/436285_first-aid-left-4-dead-wallpapers-29703051-fanpop_1440x900_h.jpg" alt="">
-				<figcaption class="white">
-					<a href=""></a>
-				</figcaption>
 		</figure>
 	</section>
+
+
+	<!-- Slide 6 -->
+<section class="slide">
+
+	<h2 style="color: orange">Climbing Gears</h2>
+
+	<div class="container">
+		<div class="lightbox-gallery">
+
+				<div ><img class="tool_image" src="http://www.outside.co.uk/images/product/Petzl-A073BA-SIROCCO-black-S17.jpg" 
+					name="Helmet" 
+					alt="There is significant risk of rock or ice fall.Whether rock clim, alpine climbing or rock climbing at crags with a reputation for looseness, most people decide that a helmet is worth wearing. "></div>
+
+				<div><img  class="tool_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQob820I0GAK9hy7vMeBOHdRLTHm80uIj2kcUGbXn4ey0aXD1H_Vw"
+				 name="Ropes" 
+				 alt="One of the most important pieces of equipment in a climbers arsenal, rope is the primary support system for climbers. They are used to catch a climber if they fall as they tend to be attached to a climbers harness and then can be staked into the side of a cliff."></div>
+
+				<div><img  class="tool_image" src="https://mistymountain.com/wp-content/uploads/2016/12/Summit-Harness-Front-300x300.jpg" 
+					name="Harness"
+					alt="The harness is the piece a equipment that goes around the legs and waist of a climber."></div>
+
+				<div><img  class="tool_image" src="https://www.tacticalassaultgearstore.com/pub/media/catalog/product/cache/6b291df8afd04bab339803e1936b8708/8/3/833758.jpg"
+				name="Pully"
+				 alt="These can be used to stretch or loosen the slack of climbing rope being used. There is a latch and a bearing in the center that enables this functionality."></div>
+
+				<div><img  class="tool_image" src="http://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw12a0e889/products/carabiners_draws/S16/210153_YELO_Positron_Straight_Carabiner_web.jpg"
+				 name="Carabiners"
+				 alt="The word carabiner comes from the German word Karabinerhaken, which means hook for a carbine. They are metal loops with a spring locked connector and they are usually made of aluminum alloy."></div>
+
+				<div><img  class="tool_image" src="https://content.backcountry.com/images/items/medium/LSP/LSP0259/BL.jpg" 
+					name="Climbing Shoe" 
+					alt="Shoe designed for climbing designed with traction and adhesion in mind. Come in many forms dependant of the type of terrain behind climbed."></div>
+
+		</div>
+
+	</div>
+
+		<figure>
+				<img class="cover" src="https://visiting-croatia.com/wp-content/uploads/2018/04/rock-climbing-iris-adventures-01-1024x640.jpg"  alt="">
+		</figure>
+</section>
+ 
+
+	<!--- SLIDE 7 -->
+<section class="slide">
+		<h2>More Climbing Gear</h2>
+		<div class="container">
+			<div class="lightbox-gallery">
+
+				<div ><img class="tool_image" src="https://www.ontarioclimbing.com/Gear/AsoloBoots/files/asolo6bgv2.jpg" name="Boots" 
+					alt="In ice climbing, having proper footwears such boots can stop toes from frostbites. They are usually housed by crampons."></div>
+
+				<div><img  class="tool_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnnh3vP1yRpv0z25jxDts-TtWOf85UjjbHlzlGH9mMak9pdVoVPQ" name="Crampons"
+					alt="Crampons are fixtures designed to attach onto your footwear to immprove mobility, and they are built specifically for providing traction while  climbing on ice.
+" 
+					></div>
+
+				<div><img  class="tool_image" src="http://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw1d5f583d/products/ice_alpine/412078_79_cobra_adze_hammer_web.jpg" name="Ice Axe"
+					alt="An ice axe is a multi-purpose climbing tool used by mountaineers both in the ascent and descent glaciers. An ice axe can perform several roles, in its simplest, the ice axe is used is walking stick. Alone with ice tool, ice Axes are vital for vertical ice climbing." 
+					></div>
+			</div>
+		</div>
+
+			<figure>
+				<img class="cover" src="https://s2.insidehook.com/ice_grid_1517938387.jpg"/>
+			</figure>
+</section>
 
 		
-	<!--- SLIDE 5 -->
-	<section class="slide">
-		<h2>Knife and multi-tool</h2>
-		They are few examples where a knife and multitool are needed:
-		<ol>
-			<li class="next">Rope gets stuck and can't get it out</li>
-			<li class="next"> Cutting old, unsafe, rope left-behind on a climb</li>
-			<li class="next">Clothing gets caught</li>
-		</ol>
+	<!--- SLIDE 8 -->
+<section class="slide">
+		<h2 >Knife and Multi-tool</h2>
 
+		<div class="container">
 
+			<div class="row">
+					<div class="col-md-3">
+						<img src="pictures/knife.png">
+					</div>
+					<div class="col-md-5">
+						<p style="color:black; font-size: 20px;"> 
+Most mountaineers carry some sort of multi tool, such as swiss army knife and certainly many carry a multi-tool. Cutting tools are useful when cords or clothing get stuch. Sometimes, there are unsafe rope left-behind from old expeditions. Usually best thing is do is get rid of it before anyone gets hurt. </p>
+					</div>
+					<div class="col-md-4">
+							<img src="pictures/tool.png">
+					</div>
+			</div>
 
-
-		<img class="cover" src="https://s7d2.scene7.com/is/image/atmosphere/332156078_99_a?bgColor=0,0,0,0&fmt=png-alpha&hei=520&resMode=sharp2&op_sharpen=1">
-	</section>
-	</section>
-
-	<section class="slide">
-		<h2>Nutrition</h2>
-		<ol>
- 			<li>Extra day's supply of food</li>
- 		</ol>
-<figure>
-				<img class="cover" src="https://www.desktopbackground.org/p/2012/08/13/436285_first-aid-left-4-dead-wallpapers-29703051-fanpop_1440x900_h.jpg" alt="">
-				<figcaption class="white">
-					<a href=""></a>
-				</figcaption>
-		</figure>	</section>
-
-	</section>
-		<section class="slide">
-		<h2>Hydration</h2>
-		<ol>
- 			<li>Water bottles or hydrogen filter</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-
-
-
-	</section>
-		<section class="slide">
-		<h2>Emergency shelter</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-		<script type="text/javascript">
-			
-		</script>
-	</section>
-
-	
-
-
-	</section>
-		<section class="slide">
-		<h2>Rope</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-	</section>
-		<section class="slide">
-		<h2>Helmet</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-	</section>
-		<section class="slide">
-		<h2>Harness</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-
+		</div>	
 </section>
-		<section class="slide">
-		<h2>Boots</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
 
+	<!--- SLIDE 9 -->
+<section class="slide bg-grad">
+	<div class="container-fluid">
+		<div class="row" >
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6  project wow animated animated4 fadeInLeft">
+		        <div class="project-hover">
+		        	<h3>Nutrition</h3>
+		            <hr />
+		            <p style="font-size: 18px">For short climbs, consume carbohydrates such as bananas, clip bar, fruit dried fruit, bananas, quick oats, and rice for a faster increase in blood glucose levels. For more intense climbs like alpine climbing, include low GI grains such as brown rice and quinoa for longer sustained energy.</p>
+		        </div>
+		    </div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 project project-1 wow animated animated3 fadeInLeft">
+		    	<div class="project-hover">
+		        	<h3>Hydration</h3>
+		            <hr />
+		            <p style="font-size: 18px"> At high altitude, the body uses more energy than it would at sea level to perform. As a result, dehydration and fatigue are common amount climbers. The good news is consuming a balanced amount of water, sodium, and electrolytes or potassium can prevent the body from fatigue.</p>
+		        </div>
+		    </div>
 
+		</div>
+	</div>
+    <div class="clearfix"></div>
+	<figure>
+		<img class="cover" src=""  alt="">
+	</figure>
 </section>
-		<section class="slide">
-		<h2>Crampons</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
 
+
+<!--- SLIDE 10 -->
+<section class="slide">
+	<h2 style="color:white">Emergency shelter</h2>
+	<div class="jumbotron bg-info" style="opacity: 0.8">
+		<div class="row"> 
+				<div class="col-sm-6 col-md-6 col-lg-6" style="color: white;font-size: 20px;">
+					<ol>
+			 			<p>While we all hope for carefree, happy-go-lucky days in the mountain, things don’t always go according to plan. It’s important to have a few emergency items in hand. They can keep you warm while waiting for rescue or an avalanche to pass. </p>
+			 		</ol>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6" style="color: aqua">
+					<ol>
+			 			<li>Tent</li>
+			 			<li>Sleep Bag</li>
+			  			<li>Tarp</li>
+			 			<li>Reflective Blanket</li>
+			 		</ol>
+				</div>
+		</div>
+	</div>
+	<figure>
+				<img class="cover" src="https://farm8.static.flickr.com/7090/7048232539_378950b8ac_b.jpg"  alt="">
+	</figure>
 </section>
-		<section class="slide">
-		<h2>Ice Axe</h2>
-		<ol>
- 			<li>Tent</li>
-  			<li>Tarp</li>
- 			<li>Reflective Blanket</li>
- 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
 
 
-	<section class="slide">
-		<h2>Belay/rappel device</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
+<!--- SLIDE 11  -->
+<section class="slide">
+	<h2 style="color: white">Rescue Equipment</h2>
+	<div class="container">
+		<div class="lightbox-gallery">
+			<!-- 			<ol>
+			 <li>Avalanche transceiver</li>
+ 			<li>Crevasse rescue gear</li>
+  			<li>Shovel</li>
+  			<li>Signaling mirror</li>
+ 		</ol> -->
+				<div ><img class="tool_image" name="Avalanche transceiver" src="https://s7d2.scene7.com/is/image/SS/102152_YYY_1?$600$"
+					alt="An Avalanche transceiver is a device that recieves pulsed radio signals. Avalanche transceivers are used for finding buried survivors."
+					></div>
 
-	<section class="slide">
-		<h2>Pulley</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
+				<div><img  class="tool_image" name="Shovel" src="https://shop.coronatoolsusa.com/pub/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/s/s/ss25010_lrg.jpg"
+					 alt="In rescue situation, shovel are used to uncover buried survivors. It's also handy when planning for camp. "></div>
 
-	<section class="slide">
-		<h2>Climbing pack</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
+				<div><img  class="tool_image" name="Crevasse rescue gear" src="https://mec.imgix.net/medias/sys_master/high-res/high-res/8807216381982/5034083-NOC02.jpg?w=600&h=600&auto=format&q=60&fit=fill&bg=FFF"
+					 alt=" Falling into a gaping cracks of crevasse is one of the major risks involved in ice climbing. As a safety measure, always carry crevasse rescue gear and and a friend who know the ins and outs of how they work. 
 
-	<section class="slide">
-		<h2>Route description or guidebook</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
+"></div>
 
-		<section class="slide">
-		<h2>Runners—singles and doubles</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
+			 
+				<div><img  class="tool_image" name="Signaling mirror" src="http://www.ustbrands.com/wp-content/uploads/2014/07/signal-devices-find-me-mirror.jpg"
+					alt="Signal mirror is used to project light from the sun from as far as 15 miles. It's not a bad idea to carry one, because rescue teams or first responders are trained to recognize distress call.
+					</div>
 
-	<section class="slide">
-		<h2>Prusik cords</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
+		</div>
+	</div>
+	<figure>
+			<img class="cover" src="https://farm8.static.flickr.com/7388/10842452316_9baefff802_b.jpg"  alt=>
+	</figure>
+</section>
 
-	<section class="slide">
-		<h2>Hand protection (athletic tape, gloves)</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
+<div class="progress bg-success"></div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+		  <!-- Modal content -->
+		 <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <h2 id='innertitle'> Title </h2>
+		    <p style="font-size: 16px">	
+		    <img id="innerimg"  class="" src="" style="max-width: 250px; max-height: 250px; margin: 0px 0px 0px 10px; float: right">
+		    <span id="innertext"> Some text in the Modal. Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal.Some text in the Modal..
+	    </span>
+	   </p>
+	  </div>
+</div>
 
 
-	<section class="slide">
-		<h2>Signaling mirror</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-
-	</section>
-		<section class="slide">
-		<h2>Avalanche transceiver</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-
-	</section>
-		<section class="slide">
-		<h2>Crevasse rescue gear</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-
-		</section>
-		<section class="slide">
-		<h2>Shovel</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-
-
-		</section>
-		<section class="slide">
-		<h2>Probe</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<div class="progress"></div>
-
-
-
-	<script src="shower/shower.min.js"></script>
+<script src="shower/shower.min.js"></script>
 	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+$(document).ready(function(){
+   	$(".tool_image").click(function(){
+    	modal.style.display = "block";
+    	$('#innerimg').attr('src', $(this).attr('src'))
+    	$('#innertitle').html($(this).attr('name'));
+    	$('#innertext').html($(this).attr('alt'));
+    });
+
+    span.onclick = function() {
+    	modal.style.display = "none";
+	}
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+    if (event.target == modal) {
+   	    modal.style.display = "none";
+	}
+   }
+
+});
+</script>
+
 
 
 </body>
